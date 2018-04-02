@@ -384,11 +384,9 @@ struct yy_trans_info
 	flex_int32_t yy_verify;
 	flex_int32_t yy_nxt;
 	};
-static yyconst flex_int16_t yy_accept[24] =
+static yyconst flex_int16_t yy_accept[9] =
     {   0,
-        0,    0,    4,    2,    3,    2,    2,    2,    2,    0,
-        0,    0,    0,    0,    0,    0,    0,    0,    0,    0,
-        1,    0,    0
+        0,    0,    4,    2,    3,    1,    1,    0
     } ;
 
 static yyconst YY_CHAR yy_ec[256] =
@@ -398,15 +396,15 @@ static yyconst YY_CHAR yy_ec[256] =
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
-        1,    1,    1,    1,    1,    1,    1,    1,    3,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
-        1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
-        1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
-        1,    1,    1,    1,    1,    1,    4,    5,    6,    7,
+        1,    1,    1,    1,    3,    3,    3,    3,    3,    3,
+        3,    3,    3,    3,    3,    3,    3,    3,    3,    3,
+        3,    3,    3,    3,    3,    3,    3,    3,    3,    3,
+        1,    1,    1,    1,    1,    1,    3,    3,    3,    3,
 
-        8,    9,    1,   10,   11,    1,    1,   12,    1,   13,
-       14,    1,    1,   15,    1,   16,   17,    1,    1,    1,
-        1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
+        3,    3,    3,    3,    3,    3,    3,    3,    3,    3,
+        3,    3,    3,    3,    3,    3,    3,    3,    3,    3,
+        3,    3,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
@@ -423,44 +421,29 @@ static yyconst YY_CHAR yy_ec[256] =
         1,    1,    1,    1,    1
     } ;
 
-static yyconst YY_CHAR yy_meta[18] =
+static yyconst YY_CHAR yy_meta[4] =
     {   0,
-        1,    2,    1,    1,    1,    1,    1,    1,    1,    1,
-        1,    1,    1,    1,    1,    1,    1
+        1,    1,    2
     } ;
 
-static yyconst flex_uint16_t yy_base[26] =
+static yyconst flex_uint16_t yy_base[10] =
     {   0,
-        0,   10,   36,   37,   37,   25,   20,   21,   19,   27,
-       13,   15,   12,   12,   21,   21,   21,    8,    2,   10,
-        7,    0,   37,   21,    0
+        0,    0,    5,    6,    6,    0,    0,    6,    2
     } ;
 
-static yyconst flex_int16_t yy_def[26] =
+static yyconst flex_int16_t yy_def[10] =
     {   0,
-       24,   24,   23,   23,   23,   23,   23,   23,   23,   23,
-       23,   23,   23,   23,   23,   23,   25,   23,   23,   25,
-       25,   23,    0,   23,   23
+        8,    1,    8,    8,    8,    9,    9,    0,    8
     } ;
 
-static yyconst flex_uint16_t yy_nxt[55] =
+static yyconst flex_uint16_t yy_nxt[10] =
     {   0,
-       20,    5,   23,   23,   23,    6,    7,   17,    8,   21,
-        9,    5,   21,   23,   23,    6,    7,   17,    8,   22,
-        9,    4,    4,   21,   19,   18,   17,   17,   16,   15,
-       14,   13,   12,   11,   10,   23,    3,   23,   23,   23,
-       23,   23,   23,   23,   23,   23,   23,   23,   23,   23,
-       23,   23,   23,   23
+        4,    5,    6,    7,    8,    3,    8,    8,    8
     } ;
 
-static yyconst flex_int16_t yy_chk[55] =
+static yyconst flex_int16_t yy_chk[10] =
     {   0,
-       25,    1,    0,    0,    0,    1,    1,   22,    1,   21,
-        1,    2,   20,    0,    0,    2,    2,   19,    2,   18,
-        2,   24,   24,   17,   16,   15,   14,   13,   12,   11,
-       10,    9,    8,    7,    6,    3,   23,   23,   23,   23,
-       23,   23,   23,   23,   23,   23,   23,   23,   23,   23,
-       23,   23,   23,   23
+        1,    1,    1,    9,    3,    8,    8,    8,    8
     } ;
 
 static yy_state_type yy_last_accepting_state;
@@ -477,11 +460,12 @@ int yy_flex_debug = 0;
 #define YY_MORE_ADJ 0
 #define YY_RESTORE_YY_MORE_OFFSET
 char *yytext;
-#line 1 "program6a.l"
-#line 2 "program6a.l"
+#line 1 "program7a.l"
+#line 2 "program7a.l"
 #include<stdio.h>
-int id = 0,i,k;
-#line 485 "lex.yy.c"
+#include<string.h>
+char find[100],replace[100];
+#line 469 "lex.yy.c"
 
 #define INITIAL 0
 
@@ -699,9 +683,9 @@ YY_DECL
 		}
 
 	{
-#line 6 "program6a.l"
+#line 7 "program7a.l"
 
-#line 705 "lex.yy.c"
+#line 689 "lex.yy.c"
 
 	while ( /*CONSTCOND*/1 )		/* loops until end-of-file is reached */
 		{
@@ -728,13 +712,13 @@ yy_match:
 			while ( yy_chk[yy_base[yy_current_state] + yy_c] != yy_current_state )
 				{
 				yy_current_state = (int) yy_def[yy_current_state];
-				if ( yy_current_state >= 24 )
+				if ( yy_current_state >= 9 )
 					yy_c = yy_meta[(unsigned int) yy_c];
 				}
 			yy_current_state = yy_nxt[yy_base[yy_current_state] + (unsigned int) yy_c];
 			++yy_cp;
 			}
-		while ( yy_base[yy_current_state] != 37 );
+		while ( yy_base[yy_current_state] != 6 );
 
 yy_find_action:
 		yy_act = yy_accept[yy_current_state];
@@ -760,43 +744,21 @@ do_action:	/* This label is used only to access EOF actions. */
 
 case 1:
 YY_RULE_SETUP
-#line 7 "program6a.l"
-{k = 0;
-                                        printf("%s\n",yytext);
-                                        while(k<yyleng && yytext[k]!=32)
-                                              k++;
-                                        for(i=k+1;i<yyleng;i++){
-                                        if(yytext[i]==',')
-                                          continue;
-                                        else if(yytext[i]==';')
-                                          break;
-                                        else if(yytext[i]=='['){
-                                        while(yytext[i]!=']')
-                                          i++;
-                                        }
-                                        else{
-                                          while(yytext[i]!=',' || yytext[i]!='[' || yytext[i]!=';'){
-                                                printf("%c",yytext[i]);
-                                                i++;
-                                          }
-
-                                        }
-                                        printf("\n");
-                                        id++;
-                                        }
-                                }
+#line 8 "program7a.l"
+{if(strcmp(find,yytext)==0)fprintf(yyout,replace);
+            else fprintf(yyout,yytext);}
 	YY_BREAK
 case 2:
 YY_RULE_SETUP
-#line 32 "program6a.l"
+#line 10 "program7a.l"
 ;
 	YY_BREAK
 case 3:
 YY_RULE_SETUP
-#line 34 "program6a.l"
+#line 11 "program7a.l"
 ECHO;
 	YY_BREAK
-#line 800 "lex.yy.c"
+#line 762 "lex.yy.c"
 case YY_STATE_EOF(INITIAL):
 	yyterminate();
 
@@ -1089,7 +1051,7 @@ static int yy_get_next_buffer (void)
 		while ( yy_chk[yy_base[yy_current_state] + yy_c] != yy_current_state )
 			{
 			yy_current_state = (int) yy_def[yy_current_state];
-			if ( yy_current_state >= 24 )
+			if ( yy_current_state >= 9 )
 				yy_c = yy_meta[(unsigned int) yy_c];
 			}
 		yy_current_state = yy_nxt[yy_base[yy_current_state] + (unsigned int) yy_c];
@@ -1117,11 +1079,11 @@ static int yy_get_next_buffer (void)
 	while ( yy_chk[yy_base[yy_current_state] + yy_c] != yy_current_state )
 		{
 		yy_current_state = (int) yy_def[yy_current_state];
-		if ( yy_current_state >= 24 )
+		if ( yy_current_state >= 9 )
 			yy_c = yy_meta[(unsigned int) yy_c];
 		}
 	yy_current_state = yy_nxt[yy_base[yy_current_state] + (unsigned int) yy_c];
-	yy_is_jam = (yy_current_state == 23);
+	yy_is_jam = (yy_current_state == 8);
 
 		return yy_is_jam ? 0 : yy_current_state;
 }
@@ -1797,14 +1759,19 @@ void yyfree (void * ptr )
 
 #define YYTABLES_NAME "yytables"
 
-#line 34 "program6a.l"
+#line 11 "program7a.l"
 
 
 
 int main(){
-yyin = fopen("identifier.c","r");
+printf("Find: ");
+scanf("%s",find);
+printf("Replace: ");
+scanf("%s",replace);
+yyin = fopen("sample.txt","r");
+yyout = fopen("output.txt","w");
 yylex();
-printf("\nNo of identifiers: %d\n",id);
 return 0;
+
 }
 
