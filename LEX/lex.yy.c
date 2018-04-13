@@ -464,8 +464,10 @@ char *yytext;
 #line 2 "program7a.l"
 #include<stdio.h>
 #include<string.h>
-char find[100],replace[100];
-#line 469 "lex.yy.c"
+char find[100],replace[100],tmp[100];
+int i,n,j,cnt,m,rp;
+
+#line 471 "lex.yy.c"
 
 #define INITIAL 0
 
@@ -683,9 +685,9 @@ YY_DECL
 		}
 
 	{
-#line 7 "program7a.l"
+#line 9 "program7a.l"
 
-#line 689 "lex.yy.c"
+#line 691 "lex.yy.c"
 
 	while ( /*CONSTCOND*/1 )		/* loops until end-of-file is reached */
 		{
@@ -744,21 +746,51 @@ do_action:	/* This label is used only to access EOF actions. */
 
 case 1:
 YY_RULE_SETUP
-#line 8 "program7a.l"
-{if(strcmp(find,yytext)==0)fprintf(yyout,replace);
-            else fprintf(yyout,yytext);}
+#line 10 "program7a.l"
+{    i = 0;
+                rp = 0;
+                n = strlen(find);
+                if(i+n<=yyleng){
+                  while(i+n<=yyleng){
+                        cnt = 0;
+                        j = i;
+                        while(j<yyleng && yytext[j]==find[cnt]){
+                          j++;cnt++;
+                        }
+                        if(cnt==n){
+                            m = strlen(replace);
+                            cnt = 0;
+                            while(cnt!=m){
+                                tmp[rp++] = replace[cnt++];
+                            }
+                            i=i+n;
+                            continue;
+                          }
+                          tmp[rp++] = yytext[i];
+                          i++;
+                        }
+                      for(;i<yyleng;i++)
+                        tmp[rp++] = yytext[i];
+                    fprintf(yyout,"%s",tmp);
+                    for(i=0;i<90;i++)
+                      tmp[i] = '\0';
+                  }
+                  else{
+                    fprintf(yyout,"%s",yytext);
+                  }
+                }
 	YY_BREAK
 case 2:
 YY_RULE_SETUP
-#line 10 "program7a.l"
-;
+#line 44 "program7a.l"
+fprintf(yyout,"%s",yytext);
 	YY_BREAK
 case 3:
 YY_RULE_SETUP
-#line 11 "program7a.l"
+#line 45 "program7a.l"
 ECHO;
 	YY_BREAK
-#line 762 "lex.yy.c"
+#line 794 "lex.yy.c"
 case YY_STATE_EOF(INITIAL):
 	yyterminate();
 
@@ -1759,7 +1791,7 @@ void yyfree (void * ptr )
 
 #define YYTABLES_NAME "yytables"
 
-#line 11 "program7a.l"
+#line 45 "program7a.l"
 
 
 
