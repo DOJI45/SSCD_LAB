@@ -10,6 +10,7 @@ int line=0,character=0,word=0;
 @  {line++;return 0;}
 %%
 
+
 int main(int argc,char* argv[]){
 
 if(argc<2){

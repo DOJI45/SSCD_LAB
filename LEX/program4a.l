@@ -3,15 +3,13 @@
 int comment = 0,i;
 %}
 
-%%
-"//"[^\n]* {comment++;fprintf(yyout,"\n");}
-"/*"(.|\n)*"*/" { for(i=0;i<yyleng;i++){
-                      if(yytext[i]=='\n')
-                      comment++;
-                      }
-                  comment++;
-                  fprintf(yyout,"\n");}
+%x com
 
+%%
+"//"[^\n]* {comment++;fprintf(yyout," ");}
+"/*" {BEGIN(com);}
+<com>"*/" {BEGIN(INITIAL);comment++;fprintf(yyout," ");}
+<com>. {}
 
 %%
 

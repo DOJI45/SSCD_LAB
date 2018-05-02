@@ -4,6 +4,7 @@ int c=0,v=0,other=0;
 %}
 
 %%
+
 [aeiouAEIOU] {v++;}
 [a-zA-Z] {c++;}
 . {other++;}
